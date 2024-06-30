@@ -3,8 +3,7 @@
 		flex-flow: column-reverse;
 		row-gap: 20px;
 		margin: 10px 0;
-		overflow-y: scroll;
-		height: calc(90% - var(--heightCard));
+		height: calc(95% - var(--heightCard));
 	}
 	:root {
 		--heightCard: 49%;

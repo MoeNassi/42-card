@@ -68,6 +68,11 @@ function Card() {
 		}
 	}, [])
 
+	// useEffect(() => {
+	// 	const number = Math.floor(Math.random() * 150)
+
+	// })
+
 	useEffect(()=> {
 		let inter = 0
 		const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ-0123456789 "
@@ -97,6 +102,9 @@ function Card() {
 
 	return (
 		<div className="container">
+			<div className="holder">
+				<div className="code">2</div>
+			</div>
 			<div className="card">
 				<div className="cardDesign"></div>
 				<div className="first_part">
@@ -142,6 +150,10 @@ function Card() {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div className="copy">
+				<img className='github' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+				<h1>made by : <a target='_blank' href='https://github.com/MoeNassi'>MoeNassi</a> &copy;</h1>
 			</div>
 		</div>
 	)

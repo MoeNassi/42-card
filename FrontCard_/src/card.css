@@ -23,6 +23,29 @@
 	align-items: center;
 	overflow: hidden;
 }
+/* .holder {
+	position: absolute;
+	width: 100%;
+	height: 100svh;
+}
+.code {
+	position: absolute;
+	color: green;
+	left: 50%;
+	font-size: 15px;
+	top: 0;
+	height: 100%;
+	transform: translateY(0%);
+	animation: ove 3s linear;
+} */
+@keyframes ove {
+	0% {
+		transform: translateY(0%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
 .card {
 	background-color: var(--background);
 	width: 53%;
@@ -135,6 +158,7 @@
 	align-items: center;
 	overflow: hidden;
 	transition: .3s;
+	box-shadow: -5px 5px 1px #322c2b85;
 }
 .level h1 {
 	font-size: 15px;
@@ -173,4 +197,20 @@
 	background-color: var(--waiting);
 	width: 100%;
 	border-radius: 10px;
+}
+.github {
+	width: 25px;
+}
+.copy h1, .copy span {
+	color: black;
+	font-size: 15px;
+}
+.copy {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
 }

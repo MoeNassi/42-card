@@ -1,0 +1,24 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.succeed, .error {
+	background-color: rgb(206, 61, 61);
+	position: absolute;
+	top: 10%;
+	right: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	width: 150px;
+	height: 59px;
+	box-shadow: 0 0 15px 2px rgb(206, 61, 61);
+	border-radius: 10px;
+	text-shadow: 0 0 5px white;
+}
+.succeed {
+	background-color: rgb(61, 206, 107);
+	box-shadow: 0 0 15px 5px rgb(61, 206, 107);
+}

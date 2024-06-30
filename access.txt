@@ -1,0 +1,11 @@
+projects = user.projects_users[]
+status = user.projects_users[].status
+score = user.projects_users[].final_mark
+level = user.cursus_users[1].level
+correction_points = user.correction_point
+promo = user.pool_year - 2018
+wallet = user.wallet
+titles = user.titles[0].name
+campus = user.campus.name
+fullname = user.usual_full_name
+login = user.login

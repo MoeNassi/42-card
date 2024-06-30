@@ -1,0 +1,62 @@
+@media screen and (max-width: 1751px) {
+	.second_part {
+		flex-flow: column-reverse;
+		row-gap: 20px;
+		margin: 10px 0;
+		overflow-y: scroll;
+		height: calc(90% - var(--heightCard));
+	}
+	:root {
+		--heightCard: 49%;
+	}
+	.first_part {
+		flex-flow: column;
+		width: 100%;
+	}
+	.student {
+		align-items: center;
+	}
+	/* .logo {
+		display: none;
+	} */
+	.fullname h1 {
+		font-size: 39px;
+	}
+}
+@media screen and (max-width: 1196px) {
+	.infos, .projects, .level {
+		width: 296px;
+	}
+	.fullname h1 {
+		font-size: 29px;
+	}
+	.profile img {
+		width: 111px;
+	}
+	.card::before {
+		width: 150px;
+		height: 28%;
+		right: -10%;
+		bottom: 78%;
+	}
+	.cardDesign {
+		width: 500px;
+		height: 39%;
+		bottom: -19%;
+		right: 79%;
+	}
+	.logo img {
+		transition: .2s;
+		width: 98px;
+	}
+}
+@media screen and (max-width: 715px) {
+	.container {
+		display: none;
+	}
+}
+/* @media screen and (max-width: 2560px) {
+	.infos, .projects, .level {
+		width: 530px;
+	}
+} */

@@ -31,6 +31,7 @@
 	padding: 0;
 	border-radius: 10px;
 	overflow: hidden;
+	transition: .3s;
 }
 .cardDesign {
 	background-color: var(--progress);
@@ -42,6 +43,7 @@
 	border-radius: 50%;
 	transition: .3s ease-out;
 	transform: translateX(300%);
+	box-shadow: 100px 0 1px #322c2b85;
 }
 .card::before {
 	content: '';
@@ -112,6 +114,8 @@
 	height: 250px;
 	border-radius: 10px;
 	transition: .3s;
+	display: flex;
+	flex-flow: column;
 }
 .progress {
 	display: flex;
@@ -148,10 +152,11 @@
 .projects {
 	background-color: var(--waiting);
 	width: 450px;
-	height: 213px;
+	height: 173px;
 	border-radius: 10px;
 	overflow-y: scroll;
 	transition: .3s;
+	position: relative;
 }
 .empty {
 	display: flex;
@@ -164,4 +169,8 @@
 .name {
 	color: #322C2B;
 }
-
+.head {
+	background-color: var(--waiting);
+	width: 100%;
+	border-radius: 10px;
+}

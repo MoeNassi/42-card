@@ -30,7 +30,6 @@ function Projects({name, score}) {
 	)
 }
 
-
 function Card() {
 	const [array, SetArray] = useState([])
 	const [fullname, setFullname] = useState('Nassi Mohammed')
@@ -47,7 +46,6 @@ function Card() {
 	const [phone, setPhone] = useState('0618234576')
 
 	useEffect(()=> {
-
 		const data = sessionStorage.getItem('studentLog')
 		if (data) {
 			const resp = JSON.parse(data)
@@ -72,7 +70,7 @@ function Card() {
 
 	useEffect(()=> {
 		let inter = 0
-		const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+		const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ-0123456789 "
 		const element = document.querySelector('h1')
 
 		function animation() {
@@ -81,7 +79,7 @@ function Card() {
 				.map((letter, index) => {
 					if (index < inter)
 						return element.dataset.value[index]
-					return ALPHABET[Math.floor(Math.random() * 26)]
+					return ALPHABET[Math.floor(Math.random() * 30)]
 				})
 				.join("")
 
@@ -94,6 +92,7 @@ function Card() {
 
 	useEffect(()=> {
 		gsap.fromTo('.cardDesign', { x: '300%' }, { duration: 2, x: '0%' });
+		// gsap.to('.cardDesign', {duration: 1, x: '0%'})
 	  }, [])
 
 	return (
@@ -118,7 +117,6 @@ function Card() {
 				</div>
 				<div className="second_part">
 					<div className="infos">
-						<Infos className='head' name='name' score='value'/>
 						<Infos name='campus' score={campus}/>
 						<Infos name='titles' score={title}/>
 						<Infos name='correction_points' score={corrPoints}/>
@@ -132,8 +130,10 @@ function Card() {
 							<div id='line' className="line"></div>
 							<h1>{level}%</h1>
 						</div>
+						<div className="head">
+							<Projects name='name' score='score'/>
+						</div>
 						<div className="projects">
-							<Projects className='head' name='name' score='score'/>
 							{
 								array.map((project, index) => {
 									if (project['validated?'] == true) return <Projects key={index} name={project.project.name} score={project.final_mark}/>
